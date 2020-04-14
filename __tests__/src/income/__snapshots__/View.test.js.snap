@@ -1,0 +1,445 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IncomeView> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "column",
+      "marginTop": 12,
+      "paddingHorizontal": 24,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+        "fontWeight": "bold",
+        "marginBottom": 12,
+      }
+    }
+  >
+    Zestawienie finansowe
+  </Text>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 18,
+            "fontWeight": "400",
+            "marginBottom": 6,
+          }
+        }
+      >
+        Przychody
+      </Text>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Zarobki
+           
+        </Text>
+        <Text>
+          2000$
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 20,
+            }
+          }
+        >
+          <RCTScrollView
+            data={
+              Array [
+                Object {
+                  "id": "header",
+                  "income": "Przepływ pieniężny",
+                  "name": "Nieruchomość / biznes",
+                },
+              ]
+            }
+            disableVirtualization={false}
+            getItem={[Function]}
+            getItemCount={[Function]}
+            horizontal={false}
+            initialNumToRender={10}
+            keyExtractor={[Function]}
+            maxToRenderPerBatch={10}
+            onContentSizeChange={[Function]}
+            onEndReachedThreshold={2}
+            onLayout={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            updateCellsBatchingPeriod={50}
+            viewabilityConfigCallbackPairs={Array []}
+            windowSize={21}
+          >
+            <View>
+              <View
+                onLayout={[Function]}
+                style={null}
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-around",
+                      "paddingVertical": 2,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#F8E6B0",
+                        "height": 1,
+                      }
+                    }
+                  />
+                  <Text
+                    style={
+                      Object {
+                        "flex": 1,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Nieruchomość / biznes
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "flex": 1,
+                        "fontWeight": "bold",
+                      }
+                    }
+                  >
+                    Przepływ pieniężny
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </RCTScrollView>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <RCTScrollView
+            data={
+              Array [
+                Object {
+                  "contribution": 1000,
+                  "id": 1,
+                  "income": 0,
+                  "name": "Dom 2+1",
+                  "price": 40000,
+                },
+                Object {
+                  "contribution": 10000,
+                  "id": 2,
+                  "income": 400,
+                  "name": "4 domki szeregowe",
+                  "price": 240000,
+                },
+              ]
+            }
+            disableVirtualization={false}
+            getItem={[Function]}
+            getItemCount={[Function]}
+            horizontal={false}
+            initialNumToRender={10}
+            keyExtractor={[Function]}
+            maxToRenderPerBatch={10}
+            onContentSizeChange={[Function]}
+            onEndReachedThreshold={2}
+            onLayout={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            updateCellsBatchingPeriod={50}
+            viewabilityConfigCallbackPairs={Array []}
+            windowSize={21}
+          >
+            <View>
+              <View
+                onLayout={[Function]}
+                style={null}
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-around",
+                      "paddingVertical": 2,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#F8E6B0",
+                        "height": 1,
+                      }
+                    }
+                  />
+                  <Text
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    Dom 2+1
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    0
+                    $
+                  </Text>
+                </View>
+              </View>
+              <View
+                onLayout={[Function]}
+                style={null}
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "flexWrap": "wrap",
+                      "justifyContent": "space-around",
+                      "paddingVertical": 2,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#F8E6B0",
+                        "height": 1,
+                      }
+                    }
+                  />
+                  <Text
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    4 domki szeregowe
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    400
+                    $
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </RCTScrollView>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 18,
+            "fontWeight": "400",
+            "marginBottom": 6,
+          }
+        }
+      >
+        Koszty
+      </Text>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Podatki
+           
+        </Text>
+        <Text>
+          400$
+        </Text>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Spłata kredytu hipotecznego
+           
+        </Text>
+        <Text>
+          300$
+        </Text>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Spłata kredytu studenckiego
+           
+        </Text>
+        <Text>
+          300$
+        </Text>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Spłata kredytu na samochód
+           
+        </Text>
+        <Text>
+          200$
+        </Text>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Spłata kart kredytowych
+           
+        </Text>
+        <Text>
+          200$
+        </Text>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Inne koszty
+           
+        </Text>
+        <Text>
+          300$
+        </Text>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Spłata pożyczki bankowej
+           
+        </Text>
+        <Text>
+          100$
+        </Text>
+      </View>
+      <View>
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Koszt utrzymania dzieci (2)
+           
+        </Text>
+        <Text>
+          200$
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

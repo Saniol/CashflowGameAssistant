@@ -1,0 +1,748 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TransactionsList> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "column",
+      "marginTop": 12,
+      "paddingHorizontal": 24,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+        "fontWeight": "bold",
+        "marginBottom": 12,
+      }
+    }
+  >
+    Rejestr gotówki
+  </Text>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      data={
+        Array [
+          Object {
+            "id": 1,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 2,
+            "summary": 2000,
+            "value": 1000,
+          },
+          Object {
+            "id": 3,
+            "summary": 500,
+            "value": -1500,
+          },
+          Object {
+            "id": 4,
+            "summary": 1500,
+            "value": 1000,
+          },
+          Object {
+            "id": 5,
+            "summary": 4500,
+            "value": 3000,
+          },
+          Object {
+            "id": 6,
+            "summary": 500,
+            "value": -4000,
+          },
+          Object {
+            "id": 7,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 8,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 9,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 10,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 11,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 12,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 13,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 14,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 15,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 16,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 17,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 18,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 19,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 20,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 21,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 22,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 23,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 24,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 25,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 26,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 27,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 28,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 29,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 30,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 31,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 32,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 33,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 34,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 35,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 36,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 37,
+            "summary": 1000,
+            "value": 1000,
+          },
+          Object {
+            "id": 38,
+            "summary": 3000,
+            "value": 1000,
+          },
+          Object {
+            "id": 39,
+            "summary": 2000,
+            "value": -1000,
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#C5DF41",
+                  "flex": 1,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#C5DF41",
+                  "flex": 1,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              2000
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#FF3822",
+                  "flex": 1,
+                }
+              }
+            >
+              -1500
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              500
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#C5DF41",
+                  "flex": 1,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              1500
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#C5DF41",
+                  "flex": 1,
+                }
+              }
+            >
+              3000
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              4500
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#FF3822",
+                  "flex": 1,
+                }
+              }
+            >
+              -4000
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              500
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#C5DF41",
+                  "flex": 1,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#C5DF41",
+                  "flex": 1,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#C5DF41",
+                  "flex": 1,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-around",
+                "paddingVertical": 2,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F8E6B0",
+                  "height": 1,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#C5DF41",
+                  "flex": 1,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#000",
+                  "flex": 2,
+                }
+              }
+            >
+              1000
+              $
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "height": 0,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+  <Text
+    style={
+      Object {
+        "fontSize": 18,
+        "fontWeight": "400",
+        "marginVertical": 18,
+      }
+    }
+  >
+    Suma:
+     2000$
+  </Text>
+</View>
+`;

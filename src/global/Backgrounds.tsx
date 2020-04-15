@@ -1,12 +1,20 @@
 import {StyleSheet} from 'react-native';
-import Colors from './Colors';
+import Colors, {ColorName} from './Colors';
 
-export default StyleSheet.create({
+type BackgroundDef = {[name in ColorName]: {backgroundColor: string}};
+
+const backgrounds: BackgroundDef = {
+    background: {
+        backgroundColor: Colors.background,
+    },
     light: {
         backgroundColor: Colors.light,
     },
     dark: {
         backgroundColor: Colors.dark,
+    },
+    black: {
+        backgroundColor: Colors.black,
     },
     red: {
         backgroundColor: Colors.red,
@@ -32,4 +40,6 @@ export default StyleSheet.create({
     orange: {
         backgroundColor: Colors.orange,
     },
-});
+};
+
+export default StyleSheet.create(backgrounds);

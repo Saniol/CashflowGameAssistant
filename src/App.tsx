@@ -8,7 +8,7 @@ import Income from './income/View';
 import Transactions from './transactions/List';
 import AppContainer from './layout/Container';
 
-const App = () => (
+const App: React.FC = () => (
     <NativeRouter>
         <AppContainer>
             <Switch>

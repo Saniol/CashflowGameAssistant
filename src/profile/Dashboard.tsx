@@ -21,7 +21,7 @@ const DashboardStyles = StyleSheet.create({
     },
 });
 
-const Dashboard = () => (
+const Dashboard: React.FC = () => (
     <View style={DashboardStyles.container}>
         <View style={LayoutStyles.rowsContainer}>
             <View style={[DashboardStyles.summaryColumn, Backgrounds.light]}>

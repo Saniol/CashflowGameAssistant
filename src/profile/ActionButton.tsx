@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {Button} from 'react-native-elements';
 import {useHistory} from 'react-router-native';
+import {ColorName} from '../global/Colors';
 import Backgrounds from '../global/Backgrounds';
 
 const styles = StyleSheet.create({
@@ -14,7 +15,13 @@ const styles = StyleSheet.create({
     },
 });
 
-const ActionButton = ({color, title, to}) => {
+interface Props {
+    color: ColorName;
+    title: string;
+    to?: string;
+}
+
+const ActionButton: React.FC<Props> = ({color, title, to}) => {
     const history = useHistory();
 
     return (
@@ -22,7 +29,7 @@ const ActionButton = ({color, title, to}) => {
             buttonStyle={[styles.button, Backgrounds[color]]}
             containerStyle={styles.buttonContainer}
             title={title}
-            onPress={() => history.push(to)}
+            onPress={() => to && history.push(to)}
         />
     );
 };

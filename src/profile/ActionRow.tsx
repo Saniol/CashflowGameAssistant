@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     },
 });
 
-const ActionRow = ({children}) => (
+const ActionRow: React.FC = ({children}) => (
     <View style={styles.actionRow}>{children}</View>
 );
 

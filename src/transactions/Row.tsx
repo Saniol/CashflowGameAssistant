@@ -19,7 +19,15 @@ const RowStyles = StyleSheet.create({
     },
 });
 
-const TransactionRow = ({item}) => (
+interface Props {
+    item: {
+        id: number;
+        value: number;
+        summary: number;
+    };
+}
+
+const TransactionRow: React.FC<Props> = ({item}) => (
     <View style={ListStyles.listRow}>
         <View style={LayoutStyles.separator} />
         <Text style={item.value >= 0 ? RowStyles.positive : RowStyles.negative}>

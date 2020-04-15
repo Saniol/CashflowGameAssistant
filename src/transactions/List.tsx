@@ -9,17 +9,14 @@ const ListStyles = StyleSheet.create({
         flex: 1,
         paddingBottom: 24,
     },
-    summaryColumn: {
-        flex: 1,
-    },
 });
 
-const TransactionsList = () => (
+const TransactionsList: React.FC = () => (
     <View style={LayoutStyles.container}>
         <Text style={LayoutStyles.header}>{Lang.transactionsHeader}</Text>
         <View style={LayoutStyles.flexItem}>
             <FlatList
-                style={ListStyles.column}
+                style={ListStyles.listColumn}
                 data={[
                     {id: 1, value: 1000, summary: 1000},
                     {id: 2, value: 1000, summary: 2000},

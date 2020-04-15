@@ -5,7 +5,7 @@ import LayoutStyles from '../global/LayoutStyles';
 import ActionRow from './ActionRow';
 import ActionButton from './ActionButton';
 
-const OtherOperations = () => (
+const OtherOperations: React.FC = () => (
     <View style={LayoutStyles.container}>
         <Text style={LayoutStyles.header}>{Lang.otherOperationsHeader}</Text>
         <ActionRow>

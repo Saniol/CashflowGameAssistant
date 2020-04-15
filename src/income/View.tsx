@@ -5,7 +5,7 @@ import LayoutStyles from '../global/LayoutStyles';
 import DisplayField from '../global/DisplayField';
 import BusinessIncomeList from './business/List';
 
-const IncomeView = () => (
+const IncomeView: React.FC = () => (
     <View style={LayoutStyles.container}>
         <Text style={LayoutStyles.header}>{Lang.incomeHeader}</Text>
         <View style={LayoutStyles.columnsContainer}>

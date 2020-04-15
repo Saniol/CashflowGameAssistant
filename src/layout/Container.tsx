@@ -26,7 +26,7 @@ const ContainerStyles = StyleSheet.create({
     },
 });
 
-const AppContainer = ({children}) => {
+const AppContainer: React.FC = ({children}) => {
     const [menuVisible, setMenuVisible] = useState(false);
     const history = useHistory();
     const goTo = useCallback(
@@ -52,17 +52,17 @@ const AppContainer = ({children}) => {
                         name={menuVisible ? 'times' : 'navicon'}
                         size={36}
                         color={Colors.light}
-                        underlayColor={Colors.dark}
                         onPress={() => setMenuVisible(!menuVisible)}
                     />
                 }
                 leftComponent={
-                    menuVisible || currentPathname === '/home' ? null : (
+                    menuVisible || currentPathname === '/home' ? (
+                        undefined
+                    ) : (
                         <Icon
                             name="arrow-left"
                             size={24}
                             color={Colors.light}
-                            underlayColor={Colors.dark}
                             onPress={() => goTo('/')}
                         />
                     )

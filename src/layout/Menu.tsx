@@ -45,13 +45,22 @@ const list = [
     },
 ];
 
-const MenuIcon = ({name}) => (
+interface MenuIconProps {
+    name: string;
+}
+
+const MenuIcon: React.FC<MenuIconProps> = ({name}) => (
     <View style={MenuStyles.iconContainer}>
         <Icon name={name} size={24} style={MenuStyles.color} />
     </View>
 );
 
-const Menu = ({goTo}) => (
+interface MenuProps {
+    goTo: Function;
+    testID?: string;
+}
+
+const Menu: React.FC<MenuProps> = ({goTo}) => (
     <View>
         {list.map((item, i) => (
             <ListItem

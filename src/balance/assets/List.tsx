@@ -2,33 +2,34 @@ import React from 'react';
 import {View, FlatList} from 'react-native';
 import Lang from '../../lang/pl';
 import ListStyles from '../../global/ListStyles';
-import BusinessesMock from '../../income/BusinessesMock';
-import BalanceLiabilitiesHeaderRow from './HeaderRow';
-import BalanceLiabilitiesRow from './Row';
+import {MockData} from '../../data/Business';
+import BalanceAssetsHeaderRow from './HeaderRow';
+import BalanceAssetsRow from './Row';
 
 const listHeader = {
     id: 'header',
     name: Lang.balanceBusiness,
-    credit: Lang.balanceBusinessCredit,
+    contribution: Lang.balanceBusinessContribution,
+    price: Lang.balanceBusinessPrice,
 };
 
-const BalanceLiabilitiesList = () => (
+const BalanceAssetsList: React.FC = () => (
     <View style={ListStyles.listContainer}>
-        <View style={ListStyles.listHeader}>
+        <View style={ListStyles.bigListHeader}>
             <FlatList
                 data={[listHeader]}
-                renderItem={BalanceLiabilitiesHeaderRow}
+                renderItem={BalanceAssetsHeaderRow}
                 keyExtractor={item => String(item.id)}
             />
         </View>
         <View style={ListStyles.listBody}>
             <FlatList
-                data={BusinessesMock}
-                renderItem={BalanceLiabilitiesRow}
+                data={MockData}
+                renderItem={BalanceAssetsRow}
                 keyExtractor={item => String(item.id)}
             />
         </View>
     </View>
 );
 
-export default BalanceLiabilitiesList;
+export default BalanceAssetsList;

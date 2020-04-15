@@ -9,16 +9,16 @@ import BusinessLiabilitiesList from './liabilities/List';
 
 const ViewStyles = StyleSheet.create({
     assetsContainer: {
-        flex: null,
+        flex: undefined,
         height: 40,
     },
     liabilitiesContainer: {
-        flex: null,
+        flex: undefined,
         height: 120,
     },
 });
 
-const BalanceView = () => (
+const BalanceView: React.FC = () => (
     <View style={LayoutStyles.container}>
         <Text style={LayoutStyles.header}>{Lang.balanceHeader}</Text>
         <Text style={LayoutStyles.subheader}>{Lang.balanceAssetsHeader}</Text>

@@ -49,7 +49,7 @@ exports[`<BalanceView> renders correctly 1`] = `
             "flexDirection": "row",
           },
           Object {
-            "flex": null,
+            "flex": undefined,
             "height": 40,
           },
         ]
@@ -671,7 +671,7 @@ exports[`<BalanceView> renders correctly 1`] = `
             "flexDirection": "row",
           },
           Object {
-            "flex": null,
+            "flex": undefined,
             "height": 120,
           },
         ]

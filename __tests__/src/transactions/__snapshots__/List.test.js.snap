@@ -247,6 +247,12 @@ exports[`<TransactionsList> renders correctly 1`] = `
       renderItem={[Function]}
       scrollEventThrottle={50}
       stickyHeaderIndices={Array []}
+      style={
+        Object {
+          "flex": 1,
+          "paddingBottom": 24,
+        }
+      }
       updateCellsBatchingPeriod={50}
       viewabilityConfigCallbackPairs={Array []}
       windowSize={21}

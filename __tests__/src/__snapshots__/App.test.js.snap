@@ -144,7 +144,6 @@ exports[`<App> renders correctly 1`] = `
           ]
         }
         testID="headerNavicon"
-        underlayColor="#EEB35F"
       >
         
       </Text>

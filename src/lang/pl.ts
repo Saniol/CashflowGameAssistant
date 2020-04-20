@@ -11,6 +11,10 @@ const pl: Lang = {
     menuTransactions: 'Rejestr gotówki',
     menuNewGame: 'Nowa gra',
 
+    newGameHeader: 'Rozpocznij nową grę',
+    newGameSelectProfession: 'Wybierz zawód:',
+    newGameStart: 'Rozpocznij',
+
     dashboardProfession: 'Zawód:',
     dashboardDream: 'Marzenie:',
     dashboardAuditor: 'Audytor:',
@@ -68,6 +72,19 @@ const pl: Lang = {
 
     transactionsHeader: 'Rejestr gotówki',
     transactionsSum: 'Suma:',
+
+    proffessionAirlinePilot: 'Pilot linii lotniczych',
+    proffessionDoctor: 'Lekarz',
+    proffessionEngineer: 'Inżynier',
+    proffessionJanitor: 'Dozorca',
+    proffessionLawyer: 'Prawnik',
+    proffessionManager: 'Menadżer',
+    proffessionMechanic: 'Mechanik',
+    proffessionNurse: 'Pielęgniarka',
+    proffessionPoliceman: 'Policjant',
+    proffessionSecretary: 'Sekretarka',
+    proffessionTeacher: 'Nauczyciel',
+    proffessionTruckDriver: 'Kierowca ciężarówki',
 
     unknownError: 'Coś poszło nie tak :/',
 };

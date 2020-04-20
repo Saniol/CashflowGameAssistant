@@ -4,6 +4,7 @@ import {NativeRouter} from 'react-router-native';
 import {mount} from 'enzyme';
 import Container from '../../../src/layout/Container';
 import renderWithContexts from '../../common/renderWithContexts';
+import getByTestId from '../../common/getByTestId';
 
 describe('<Container>', () => {
     renderWithContexts(Container);
@@ -22,39 +23,26 @@ describe('<Container>', () => {
         });
 
         const pressNavicon = () => {
-            const navicon = wrapper
-                .findWhere(node => node.prop('testID') === 'headerNavicon')
-                .first();
-
+            const navicon = getByTestId(wrapper, 'headerNavicon').first();
             navicon.props().onPress();
 
             wrapper.update();
         };
 
         it('should display given children', () => {
-            expect(
-                wrapper.findWhere(node => node.prop('testID') === 'testChild'),
-            ).toExist();
+            expect(getByTestId(wrapper, 'testChild')).toExist();
         });
 
         describe('navicon clicked', () => {
             it('should display <Menu>', () => {
                 pressNavicon();
-                expect(
-                    wrapper.findWhere(
-                        node => node.prop('testID') === 'mainMenu',
-                    ),
-                ).toExist();
+                expect(getByTestId(wrapper, 'mainMenu')).toExist();
             });
         });
         describe('navicon clicked again', () => {
             it('should display given children', () => {
                 pressNavicon();
-                expect(
-                    wrapper.findWhere(
-                        node => node.prop('testID') === 'testChild',
-                    ),
-                ).toExist();
+                expect(getByTestId(wrapper, 'testChild')).toExist();
             });
         });
     });

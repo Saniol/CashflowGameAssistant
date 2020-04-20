@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NewGame> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "flexDirection": "column",
+      "marginTop": 12,
+      "paddingHorizontal": 24,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+        "fontWeight": "bold",
+        "marginBottom": 12,
+      }
+    }
+  >
+    Rozpocznij nową grę
+  </Text>
+  <Text>
+    Wybierz zawód:
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FCE9C4",
+        },
+        Object {
+          "marginBottom": 18,
+        },
+      ]
+    }
+  >
+    <RCTPicker
+      items={
+        Array [
+          Object {
+            "label": "Pilot linii lotniczych",
+            "textColor": undefined,
+            "value": "AirlinePilot",
+          },
+          Object {
+            "label": "Lekarz",
+            "textColor": undefined,
+            "value": "Doctor",
+          },
+          Object {
+            "label": "Inżynier",
+            "textColor": undefined,
+            "value": "Engineer",
+          },
+          Object {
+            "label": "Dozorca",
+            "textColor": undefined,
+            "value": "Janitor",
+          },
+          Object {
+            "label": "Prawnik",
+            "textColor": undefined,
+            "value": "Lawyer",
+          },
+          Object {
+            "label": "Menadżer",
+            "textColor": undefined,
+            "value": "Manager",
+          },
+          Object {
+            "label": "Mechanik",
+            "textColor": undefined,
+            "value": "Mechanic",
+          },
+          Object {
+            "label": "Pielęgniarka",
+            "textColor": undefined,
+            "value": "Nurse",
+          },
+          Object {
+            "label": "Policjant",
+            "textColor": undefined,
+            "value": "Policeman",
+          },
+          Object {
+            "label": "Sekretarka",
+            "textColor": undefined,
+            "value": "Secretary",
+          },
+          Object {
+            "label": "Nauczyciel",
+            "textColor": undefined,
+            "value": "Teacher",
+          },
+          Object {
+            "label": "Kierowca ciężarówki",
+            "textColor": undefined,
+            "value": "TruckDriver",
+          },
+        ]
+      }
+      onChange={[Function]}
+      selectedIndex={0}
+      style={
+        Array [
+          Object {
+            "height": 216,
+          },
+          undefined,
+        ]
+      }
+      testID="newGameProffessionPicker"
+    />
+  </View>
+  <View
+    accessibilityRole="button"
+    accessibilityState={Object {}}
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="newGameStartButton"
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "margin": 8,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#EEB35F",
+            },
+          ]
+        }
+      >
+        Rozpocznij
+      </Text>
+    </View>
+  </View>
+</View>
+`;

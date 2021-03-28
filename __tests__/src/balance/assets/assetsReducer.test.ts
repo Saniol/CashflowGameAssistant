@@ -48,5 +48,14 @@ describe('balance/assets/assetsReducer', () => {
                 expect(result).toStrictEqual(expected);
             });
         });
+
+        describe('dispatched clear() action', () => {
+            it('should remove all assets', () => {
+                const action = assetsReducer.actions.clear();
+                const result = assetsReducer.reducer(sampleState, action);
+
+                expect(result).toStrictEqual([]);
+            });
+        });
     });
 });

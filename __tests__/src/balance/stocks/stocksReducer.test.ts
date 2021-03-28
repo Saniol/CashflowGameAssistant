@@ -45,5 +45,14 @@ describe('balance/stocks/stocksReducer', () => {
                 expect(result).toStrictEqual(expected);
             });
         });
+
+        describe('dispatched clear() action', () => {
+            it('should remove all stocks', () => {
+                const action = stocksReducer.actions.clear();
+                const result = stocksReducer.reducer(sampleState, action);
+
+                expect(result).toStrictEqual([]);
+            });
+        });
     });
 });

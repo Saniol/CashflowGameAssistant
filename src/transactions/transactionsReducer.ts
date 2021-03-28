@@ -24,5 +24,8 @@ export default createSlice({
                 totalAfter: lastTotal + value,
             });
         },
+        clear: (state): void => {
+            state.length = 0;
+        },
     },
 });

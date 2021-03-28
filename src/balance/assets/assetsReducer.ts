@@ -19,5 +19,8 @@ export default createSlice({
         remove: (state, action: PayloadAction<number>): void => {
             state.splice(action.payload, 1);
         },
+        clear: (state): void => {
+            state.length = 0;
+        },
     },
 });

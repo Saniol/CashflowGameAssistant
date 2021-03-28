@@ -83,5 +83,39 @@ describe('balance/liabilities/liabilitiesReducer', () => {
                 expect(result).toStrictEqual(expected);
             });
         });
+
+        describe('dispatched setInitValues() action with profession data', () => {
+            it('should update values', () => {
+                const action = liabilitiesReducer.actions.setInitValues({
+                    income: 4600,
+                    savings: 400,
+                    expenses: {
+                        taxes: 900,
+                        mortgage: 700,
+                        studentLoan: 100,
+                        carLoan: 100,
+                        creditCards: 200,
+                        other: 1000,
+                        child: 300,
+                    },
+                    liabilities: {
+                        mortgage: 75000,
+                        studentLoan: 12000,
+                        carLoan: 6000,
+                        creditCards: 4000,
+                    },
+                });
+                const result = liabilitiesReducer.reducer(sampleState, action);
+                const expected = {
+                    mortgage: {total: 75000, monthly: 700},
+                    studentLoan: {total: 12000, monthly: 100},
+                    carLoan: {total: 6000, monthly: 100},
+                    creditCards: {total: 4000, monthly: 200},
+                    bankLoan: {total: 0, monthly: 0},
+                };
+
+                expect(result).toStrictEqual(expected);
+            });
+        });
     });
 });

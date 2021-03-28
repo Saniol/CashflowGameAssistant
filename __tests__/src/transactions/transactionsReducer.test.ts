@@ -38,5 +38,14 @@ describe('transactions/transactionsReducer', () => {
                 expect(result).toStrictEqual(expected);
             });
         });
+
+        describe('dispatched clear() action', () => {
+            it('should remove all transactions', () => {
+                const action = transactionsReducer.actions.clear();
+                const result = transactionsReducer.reducer(sampleState, action);
+
+                expect(result).toStrictEqual([]);
+            });
+        });
     });
 });

@@ -1,19 +1,18 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 interface LiabilityValuesI {
     total: number;
     monthly: number;
 }
 
-interface LiabilitiesI {
-    mortgage: LiabilityValuesI;
-    studentLoan: LiabilityValuesI;
-    carLoan: LiabilityValuesI;
-    creditCards: LiabilityValuesI;
-    bankLoan: LiabilityValuesI;
-}
+type LiabilityType =
+    | 'mortgage'
+    | 'studentLoan'
+    | 'carLoan'
+    | 'creditCards'
+    | 'bankLoan';
 
-const initialState: LiabilitiesI = {
+const initialState: Record<LiabilityType, LiabilityValuesI> = {
     mortgage: {total: 0, monthly: 0},
     studentLoan: {total: 0, monthly: 0},
     carLoan: {total: 0, monthly: 0},
@@ -24,5 +23,34 @@ const initialState: LiabilitiesI = {
 export default createSlice({
     name: 'liabilities',
     initialState,
-    reducers: {},
+    reducers: {
+        payOff: (
+            state,
+            action: PayloadAction<{type: LiabilityType; value?: number}>,
+        ): void => {
+            const {type, value} = action.payload;
+
+            if (type === 'bankLoan' && state.bankLoan.total) {
+                const {total, monthly} = state.bankLoan;
+
+                state.bankLoan = {
+                    total: value ? total - value : 0,
+                    monthly: value ? monthly - value / 10 : 0,
+                };
+
+                return;
+            }
+
+            state[type] = {total: 0, monthly: 0};
+        },
+        takeBankLoan: (state, action: PayloadAction<number>): void => {
+            const loanValue = action.payload;
+            const {total, monthly} = state.bankLoan;
+
+            state.bankLoan = {
+                total: total + loanValue,
+                monthly: monthly + loanValue / 10,
+            };
+        },
+    },
 });

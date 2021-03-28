@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 interface AssetI {
     description: string;
@@ -12,5 +12,12 @@ const initialState: AssetI[] = [];
 export default createSlice({
     name: 'assets',
     initialState,
-    reducers: {},
+    reducers: {
+        add: (state, action: PayloadAction<AssetI>): void => {
+            state.push(action.payload);
+        },
+        remove: (state, action: PayloadAction<number>): void => {
+            state.splice(action.payload, 1);
+        },
+    },
 });

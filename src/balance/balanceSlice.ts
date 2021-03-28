@@ -6,7 +6,6 @@ const initialState = {
     staticExpenses: {taxes: 0, other: 0},
     baseIncome: 0,
     networkMarketing: 0,
-    cash: 0,
 };
 
 export default createSlice({
@@ -33,7 +32,6 @@ export default createSlice({
 
             state.baseIncome = proffesionData.income;
             state.networkMarketing = 0;
-            state.cash = 0;
         },
     },
 });

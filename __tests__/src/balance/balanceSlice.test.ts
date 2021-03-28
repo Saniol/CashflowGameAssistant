@@ -5,7 +5,6 @@ const sampleState = {
     staticExpenses: {taxes: 400, other: 500},
     baseIncome: 2300,
     networkMarketing: 1,
-    cash: 10000,
 };
 
 describe('balance/balanceSlice', () => {
@@ -69,7 +68,6 @@ describe('balance/balanceSlice', () => {
                     staticExpenses: {taxes: 900, other: 1000},
                     baseIncome: 4600,
                     networkMarketing: 0,
-                    cash: 0, // cash should be added as transaction
                 };
 
                 expect(result).toStrictEqual(expected);

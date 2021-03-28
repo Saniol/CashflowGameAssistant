@@ -1,4 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {ProffessionInitData} from '../data/professions/Proffession';
 
 interface TransactionI {
     id: number;
@@ -6,26 +7,35 @@ interface TransactionI {
     totalAfter: number;
 }
 
-const initialState: TransactionI[] = [];
+interface TransactionsStateI {
+    cash: number;
+    list: TransactionI[];
+}
+
+const initialState: TransactionsStateI = {
+    cash: 0,
+    list: [],
+};
 
 export default createSlice({
     name: 'transactions',
     initialState,
     reducers: {
         add: (state, action: PayloadAction<number>): void => {
-            const lastTotal = state.length
-                ? state[state.length - 1].totalAfter
-                : 0;
             const value = action.payload;
 
-            state.push({
-                id: state.length + 1,
+            state.cash += value;
+            state.list.push({
+                id: state.list.length + 1,
                 value,
-                totalAfter: lastTotal + value,
+                totalAfter: state.cash,
             });
         },
-        clear: (state): void => {
-            state.length = 0;
+        init: (state, action: PayloadAction<ProffessionInitData>): void => {
+            const proffesionData = action.payload;
+
+            state.cash = proffesionData.income + proffesionData.savings;
+            state.list.length = 0;
         },
     },
 });

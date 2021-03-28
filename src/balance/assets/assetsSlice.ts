@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-interface AssetI {
+export interface AssetI {
     description: string;
     totalCost: number;
     mortgage: number;

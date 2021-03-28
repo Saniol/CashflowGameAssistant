@@ -3,7 +3,7 @@ import {View, Text, StyleSheet} from 'react-native';
 import Lang from '../lang/pl';
 import LayoutStyles from '../global/LayoutStyles';
 import DisplayField from '../global/DisplayField';
-import StockList from './stock/List';
+import StockList from './stocks/List';
 import BusinessAssetsList from './assets/List';
 import BusinessLiabilitiesList from './liabilities/List';
 

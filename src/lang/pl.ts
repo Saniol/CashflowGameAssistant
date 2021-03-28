@@ -3,7 +3,7 @@ interface Lang {
 }
 
 const pl: Lang = {
-    menuHeader: 'Cassflow Game Assistant',
+    menuHeader: 'Cashflow Game Assistant',
 
     menuDashboard: 'Ogólne',
     menuIncome: 'Zestawienie finansowe',

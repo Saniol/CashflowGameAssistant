@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 interface StockI {
     description: string;
@@ -11,5 +11,12 @@ const initialState: StockI[] = [];
 export default createSlice({
     name: 'stocks',
     initialState,
-    reducers: {},
+    reducers: {
+        add: (state, action: PayloadAction<StockI>): void => {
+            state.push(action.payload);
+        },
+        remove: (state, action: PayloadAction<number>): void => {
+            state.splice(action.payload, 1);
+        },
+    },
 });

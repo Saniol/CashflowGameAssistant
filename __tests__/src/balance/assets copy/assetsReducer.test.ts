@@ -1,4 +1,4 @@
-import assetsReducer from '../../../../src/balance/assets/assetsReducer';
+import assetsSlice from '../../../../src/balance/assets/assetsSlice';
 
 const sampleState = [
     {
@@ -15,24 +15,24 @@ const sampleState = [
     },
 ];
 
-describe('balance/assets/assetsReducer', () => {
+describe('balance/assets/assetsSlice', () => {
     describe('#reducer', () => {
         it('should handle initial state', () => {
             expect(
-                assetsReducer.reducer(undefined, {type: 'fake-action'}),
+                assetsSlice.reducer(undefined, {type: 'fake-action'}),
             ).toBeInstanceOf(Object);
         });
 
         describe('dispatched add() action', () => {
-            it('should add new asset to state', () => {
+            it('should update add new asset to state', () => {
                 const newAsset = {
                     description: 'sampleAsset',
                     totalCost: 5000,
                     mortgage: 4000,
                     income: 100,
                 };
-                const action = assetsReducer.actions.add(newAsset);
-                const result = assetsReducer.reducer(sampleState, action);
+                const action = assetsSlice.actions.add(newAsset);
+                const result = assetsSlice.reducer(sampleState, action);
                 const expected = [...sampleState, newAsset];
 
                 expect(result).toStrictEqual(expected);
@@ -41,20 +41,11 @@ describe('balance/assets/assetsReducer', () => {
 
         describe('dispatched remove() action', () => {
             it('should remove asset in given index', () => {
-                const action = assetsReducer.actions.remove(1);
-                const result = assetsReducer.reducer(sampleState, action);
+                const action = assetsSlice.actions.remove(1);
+                const result = assetsSlice.reducer(sampleState, action);
                 const expected = [sampleState[0]];
 
                 expect(result).toStrictEqual(expected);
-            });
-        });
-
-        describe('dispatched clear() action', () => {
-            it('should remove all assets', () => {
-                const action = assetsReducer.actions.clear();
-                const result = assetsReducer.reducer(sampleState, action);
-
-                expect(result).toStrictEqual([]);
             });
         });
     });

@@ -1,4 +1,4 @@
-import balanceReducer from '../../../src/balance/balanceReducer';
+import balanceSlice from '../../../src/balance/balanceSlice';
 
 const sampleState = {
     children: {count: 1, costPerChild: 100},
@@ -8,18 +8,18 @@ const sampleState = {
     cash: 10000,
 };
 
-describe('balance/balanceReducer', () => {
+describe('balance/balanceSlice', () => {
     describe('#reducer', () => {
         it('should handle initial state', () => {
             expect(
-                balanceReducer.reducer(undefined, {type: 'fake-action'}),
+                balanceSlice.reducer(undefined, {type: 'fake-action'}),
             ).toBeInstanceOf(Object);
         });
 
         describe('dispatched addChild() action', () => {
             it('should update children values', () => {
-                const action = balanceReducer.actions.addChild();
-                const result = balanceReducer.reducer(sampleState, action);
+                const action = balanceSlice.actions.addChild();
+                const result = balanceSlice.reducer(sampleState, action);
                 const expected = {
                     ...sampleState,
                     children: {count: 2, costPerChild: 100},
@@ -31,8 +31,8 @@ describe('balance/balanceReducer', () => {
 
         describe('dispatched addNetworkMarketing() action', () => {
             it('should update children values', () => {
-                const action = balanceReducer.actions.addNetworkMarketing();
-                const result = balanceReducer.reducer(sampleState, action);
+                const action = balanceSlice.actions.addNetworkMarketing();
+                const result = balanceSlice.reducer(sampleState, action);
                 const expected = {
                     ...sampleState,
                     networkMarketing: 2,
@@ -44,7 +44,7 @@ describe('balance/balanceReducer', () => {
 
         describe('dispatched setInitValues() action with profession data', () => {
             it('should update values', () => {
-                const action = balanceReducer.actions.setInitValues({
+                const action = balanceSlice.actions.setInitValues({
                     income: 4600,
                     savings: 400,
                     expenses: {
@@ -63,7 +63,7 @@ describe('balance/balanceReducer', () => {
                         creditCards: 4000,
                     },
                 });
-                const result = balanceReducer.reducer(sampleState, action);
+                const result = balanceSlice.reducer(sampleState, action);
                 const expected = {
                     children: {count: 0, costPerChild: 300},
                     staticExpenses: {taxes: 900, other: 1000},

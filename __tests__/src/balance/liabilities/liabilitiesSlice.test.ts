@@ -1,4 +1,4 @@
-import liabilitiesReducer from '../../../../src/balance/liabilities/liabilitiesReducer';
+import liabilitiesSlice from '../../../../src/balance/liabilities/liabilitiesSlice';
 
 const sampleState = {
     mortgage: {total: 140000, monthly: 1000},
@@ -8,21 +8,21 @@ const sampleState = {
     bankLoan: {total: 3000, monthly: 300},
 };
 
-describe('balance/liabilities/liabilitiesReducer', () => {
+describe('balance/liabilities/liabilitiesSlice', () => {
     describe('#reducer', () => {
         it('should handle initial state', () => {
             expect(
-                liabilitiesReducer.reducer(undefined, {type: 'fake-action'}),
+                liabilitiesSlice.reducer(undefined, {type: 'fake-action'}),
             ).toBeInstanceOf(Object);
         });
 
         describe('dispatched payOff() action', () => {
             describe('type is valid and is not equal "bankLoan"', () => {
                 it('should set liability values to 0', () => {
-                    const action = liabilitiesReducer.actions.payOff({
+                    const action = liabilitiesSlice.actions.payOff({
                         type: 'carLoan',
                     });
-                    const result = liabilitiesReducer.reducer(
+                    const result = liabilitiesSlice.reducer(
                         sampleState,
                         action,
                     );
@@ -36,10 +36,10 @@ describe('balance/liabilities/liabilitiesReducer', () => {
             });
             describe('type is equal "bankLoan", value is not defined', () => {
                 it('should set bank loan values to 0', () => {
-                    const action = liabilitiesReducer.actions.payOff({
+                    const action = liabilitiesSlice.actions.payOff({
                         type: 'bankLoan',
                     });
-                    const result = liabilitiesReducer.reducer(
+                    const result = liabilitiesSlice.reducer(
                         sampleState,
                         action,
                     );
@@ -53,11 +53,11 @@ describe('balance/liabilities/liabilitiesReducer', () => {
             });
             describe('type is equal "bankLoan", value is defined', () => {
                 it('should reduce bank loan values', () => {
-                    const action = liabilitiesReducer.actions.payOff({
+                    const action = liabilitiesSlice.actions.payOff({
                         type: 'bankLoan',
                         value: 1000,
                     });
-                    const result = liabilitiesReducer.reducer(
+                    const result = liabilitiesSlice.reducer(
                         sampleState,
                         action,
                     );
@@ -73,8 +73,8 @@ describe('balance/liabilities/liabilitiesReducer', () => {
 
         describe('dispatched takeBankLoan() action', () => {
             it('should increase bank loan values', () => {
-                const action = liabilitiesReducer.actions.takeBankLoan(2000);
-                const result = liabilitiesReducer.reducer(sampleState, action);
+                const action = liabilitiesSlice.actions.takeBankLoan(2000);
+                const result = liabilitiesSlice.reducer(sampleState, action);
                 const expected = {
                     ...sampleState,
                     bankLoan: {total: 5000, monthly: 500},
@@ -86,7 +86,7 @@ describe('balance/liabilities/liabilitiesReducer', () => {
 
         describe('dispatched setInitValues() action with profession data', () => {
             it('should update values', () => {
-                const action = liabilitiesReducer.actions.setInitValues({
+                const action = liabilitiesSlice.actions.setInitValues({
                     income: 4600,
                     savings: 400,
                     expenses: {
@@ -105,7 +105,7 @@ describe('balance/liabilities/liabilitiesReducer', () => {
                         creditCards: 4000,
                     },
                 });
-                const result = liabilitiesReducer.reducer(sampleState, action);
+                const result = liabilitiesSlice.reducer(sampleState, action);
                 const expected = {
                     mortgage: {total: 75000, monthly: 700},
                     studentLoan: {total: 12000, monthly: 100},

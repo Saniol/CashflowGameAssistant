@@ -1,4 +1,4 @@
-import stocksReducer from '../../../../src/balance/stocks/stocksReducer';
+import stocksSlice from '../../../../src/balance/stocks/stocksSlice';
 
 const sampleState = [
     {
@@ -13,11 +13,11 @@ const sampleState = [
     },
 ];
 
-describe('balance/stocks/stocksReducer', () => {
+describe('balance/stocks/stocksSlice', () => {
     describe('#reducer', () => {
         it('should handle initial state', () => {
             expect(
-                stocksReducer.reducer(undefined, {type: 'fake-action'}),
+                stocksSlice.reducer(undefined, {type: 'fake-action'}),
             ).toBeInstanceOf(Object);
         });
 
@@ -28,8 +28,8 @@ describe('balance/stocks/stocksReducer', () => {
                     units: 200,
                     costPerUnit: 10,
                 };
-                const action = stocksReducer.actions.add(newStock);
-                const result = stocksReducer.reducer(sampleState, action);
+                const action = stocksSlice.actions.add(newStock);
+                const result = stocksSlice.reducer(sampleState, action);
                 const expected = [...sampleState, newStock];
 
                 expect(result).toStrictEqual(expected);
@@ -38,8 +38,8 @@ describe('balance/stocks/stocksReducer', () => {
 
         describe('dispatched remove() action', () => {
             it('should remove stock in given index', () => {
-                const action = stocksReducer.actions.remove(1);
-                const result = stocksReducer.reducer(sampleState, action);
+                const action = stocksSlice.actions.remove(1);
+                const result = stocksSlice.reducer(sampleState, action);
                 const expected = [sampleState[0]];
 
                 expect(result).toStrictEqual(expected);
@@ -48,8 +48,8 @@ describe('balance/stocks/stocksReducer', () => {
 
         describe('dispatched clear() action', () => {
             it('should remove all stocks', () => {
-                const action = stocksReducer.actions.clear();
-                const result = stocksReducer.reducer(sampleState, action);
+                const action = stocksSlice.actions.clear();
+                const result = stocksSlice.reducer(sampleState, action);
 
                 expect(result).toStrictEqual([]);
             });
